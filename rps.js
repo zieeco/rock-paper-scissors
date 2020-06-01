@@ -38,7 +38,6 @@ function increaseScore(){
   const updatePlayer = document.querySelector('#player-score p');
   updateComputer.textContent = computer;
   updatePlayer.textContent = player;
-  
 }
 
 function computerPlay(){
