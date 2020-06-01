@@ -25,6 +25,8 @@ scissorsButton.addEventListener('click', ()=>{
   winner.textContent = 'choose one of this options to play!';
   updateComputer.textContent = 0;
   updatePlayer.textContent = 0;
+  player = 0;
+  computer = 0;
 };
 
 function game(){ 
@@ -94,5 +96,5 @@ if ((playerSelection) === (computerSelection)) {
     increaseScore();
     return;
  }
- game();
+
 }
