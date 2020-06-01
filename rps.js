@@ -23,6 +23,8 @@ scissorsButton.addEventListener('click', ()=>{
   
  reset.onclick = () => {
   winner.textContent = 'choose one of this options to play!';
+  const updateComputer = document.querySelector('#computer-score p');
+  const updatePlayer = document.querySelector('#player-score p');
   updateComputer.textContent = 0;
   updatePlayer.textContent = 0;
   player = 0;
