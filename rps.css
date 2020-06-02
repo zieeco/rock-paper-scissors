@@ -48,7 +48,7 @@ header {
     height: 312px;
     text-align: center;
     background-image: -webkit-linear-gradient(top,#dedede 0,#ebebeb 3%,#ebebeb 97%,#dedede 100%);
-    padding: 20px;
+    padding: 25px;
 }
 #weaponSelection {
     display: flex;

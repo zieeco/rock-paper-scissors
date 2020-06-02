@@ -33,9 +33,9 @@ scissorsButton.addEventListener('click', ()=>{
 
 function game(){ 
   weaponButtons.forEach((button) => {
-    button.addEventListener('click', playRound())    
+    button.addEventListener('click', playRound());    
   });
-};
+}
 
 function increaseScore(){
   const updateComputer = document.querySelector('#computer-score p');
@@ -68,15 +68,9 @@ if ((playerSelection) === (computerSelection)) {
     increaseScore();
     return;
   }
-  else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) {  
-    winner.textContent = 'Computer wins! scissors beats paper.';
+  else if ((playerSelection === 'rock') && (computerSelection === 'paper')) {  
+    winner.textContent = 'Computer wins! Paper beats rock.';
     computer++;
-    increaseScore();
-    return;
-  }
-  else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) {
-    winner.textContent = 'You win! scissors beats paper.';
-    player++;
     increaseScore();
     return;
   }
@@ -86,17 +80,22 @@ if ((playerSelection) === (computerSelection)) {
     increaseScore();
     return;
   }
+  else if ((playerSelection === 'paper') && (computerSelection === 'rock')) {
+    winner.textContent = 'You win! Paper beats rock.';
+    player++;
+    increaseScore();
+    return;
+  }
+  else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) {
+    winner.textContent = 'Computer wins! Rock beats scissors.';
+    computer++;
+    increaseScore();
+    return;
+  }
   else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) {
     winner.textContent = 'You win! Scissors beats paper.';
     player++;
     increaseScore();
     return;
-  }
-  else if ((playerSelection === 'rock') && (computerSelection === 'paper')) {
-    winner.textContent = 'Computer wins! Paper beats rock.';
-    computer++;
-    increaseScore();
-    return;
  }
-
 }
