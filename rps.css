@@ -62,6 +62,7 @@ header {
     position: relative;
     border-radius: 50%;
     border-width: 0;
+    outline: none;
 }
 #rock, #paper, #scissors {
     font-family: 'Orbitron', sans-serif;
